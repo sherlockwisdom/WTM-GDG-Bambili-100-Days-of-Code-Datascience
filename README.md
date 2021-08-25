@@ -45,6 +45,7 @@ The features will be be using for this concepts are:
 
  - **Play Button:** Once the play button is clicked, Colabs will begin running the piece of code you just wrote.
 <img src="images/new_notebook_colabs.png" />
+
  ##### Action Item
  - Type the following piece of Python3 code in the Colabs cells
  `print('Hello world')`
