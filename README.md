@@ -1,5 +1,5 @@
 ﻿﻿
-# Day 2
+# Day 3
 ## Introduction to your Tools
 
 ### Definitions
@@ -12,7 +12,7 @@ __concept__ -  Piece of knowledge the being introduced for the day.\
  __push__ - Sending codes from your computer to your Github account\
 
 #### Today's concept
-Today we will introduce the participants to the naming conventions used by programming languages. We will further work on creating a simple program with Python3. 
+Today we will introduce the participants to processing using Python and also a brief overview of how processing works at the CPU level. 
 
 #### Disclaimer
 Before continuing the participants should meet the following requirements. In case you do not already have them, use the links attached to be guided.
@@ -21,69 +21,74 @@ Before continuing the participants should meet the following requirements. In ca
 3. Have an active internet connection while using Colabs
 
 #### Goal
-By the end of this concept, the participant should be aware of concepts as variables, data types and how to use them.
+By the end of this concept, the participant should be aware of concepts such as the rule CPU plays in programming, identifying the types of CPUs and doing some basic CPU task with Python. The participant will also learn how to do some basic arithmetic using the Python3.
 
- 1. Returning to a Colabs projects. \
- 2. Writing more lines of code on Colabs \
- 3. Committing projects to GitHub directly from Google Colab.  \
+ 1. Returning to a Colabs projects.
+ 2. Writing more lines of code on Colabs.
+ 3. Committing projects to GitHub directly from Google Colab. 
 
-#### Task 1: Accessing Colabs
-Your Colabs are stored automatically on the cloud. This means every change you make will be stored online and whenever you return to it you will be able to continue from where you ended. You can revisit you colabs by going to https://colabs.research.google.com. 
-##### Action item
-- Go to colabs and click on the project you created in Day 1 concept to continue using it
+#### Task 1: Understanding how processing works in Python
+Computers were created for the sole reasons of performing complex mathematical operations that would not have been feasibly done by a human person. \
+**_Great read:_** https://www.history.com/news/human-computers-women-at-nasa \
+This ability of computers is what allows data scientist to compute huge amounts of data in complex activities such as machine learning and other form of analysis. \
+In the last concept we saw that when it came to assigning data types to variables we rely heavily on the RAM. \
+Now when it comes to performing calculations and other forms of data manipulations we rely heavily on the CPU. \
+Every time a user does any form of computation on the computer, they rely on the CPU. For example, when you move the mouse a complex algorithm is used to map the location of the pointer on the screen while maintaining communications with the physical mouse. This is all done on the CPU which is why when the CPU is overworked (doing too many heavy things at once) events turn to happen way after the command has been sent. In some cases all the previous commands requested such as dragging an icon or deleting a file will be done almost all at once way after the original request was made. \
+When performing activities in Python such as mathematical operations or searching for files on the computer the CPU is being consumed. \
+CPU is measured in frequency (GHz) which relates to how fast the programs can be executed on the computer. Modern computers come with more than 1 CPU installed; computers with 2 CPUs are called Dual Core, computers with 4 CPUs are called Quad Core. Computers go all the way up to 32 CPUs mostly used by big industrial units. \
+When it comes to extremely large data sets we will begin relying on the GPU (Graphical Processing Unit). \
 
-#### Task 2: Writing a program that takes input with Python3
-As a data scientist, understand the naming conventions of the tools you use are very important for you daily work. Most tools are defined by the naming conventions and you will be left lost in such as situation of you are not knowledge on your tools. Here are some general coding naming conventions you will begin seeing from now on.
-- **Variables**
-We all have heard of RAM on the computer. For most people, when the RAM is small the computer becomes slow and faster when more RAM is added. RAM stands for Random Access Memory. When you boot up your computer, all the icons and text you see are coming from the RAM. Each icon is a picture and as such takes up space on the RAM (that is why when the RAM is small the computer takes long to start or load icons). Also when you watch a video it plays from the RAM of your computer that is why when the RAM is small videos begin lagging.\
-In programming you store your programs directly on the RAM whenever you run them, but in other to do that you need to understand how to ask the computer for the space you need. This are called variables. When you create a variable you tell the computer to keep some space for you. This space is dynamic which means the computer knows you are about to store something but it does not know how big it is. That is why you can declare empty variables (when you create a variable it is known as declaring a variable). \
-Variables can be named with letters of the alphabet, numbers (though do not begin the name of a variable with a number) and some symbols (symbols mostly used are the underscore (_)).
-- **Data Types**
-When you declare variables they do not hold any data and as such do not consume space on the RAM. To make a variable consume data you have to provide it the data you need for storage. Based on the type and size of data, it will determine how much space is consumed on the RAM. For example, if your variable holds 2MB of data, that is 2MB consumption on the RAM. As a data scientist there are occasions where you may need to hold data up to and more than 10 GB on the RAM. This will not be possible if your system does not have at least 10 GB of RAM. This are extreme cases though and rarely would you be in such situations. \
-**Fun fact:** _RAMs can easily be purchased and upgraded on a computer. Most RAMS are relatively cheap_
+#### Follow along examples (you are expected to type this in your colabs and get the required outputs)
+1. We begin with a basic form of processing, that is the "Hello world" of mathematics (1+1) \
+To perform a simple 1+1 calculation in python; \
+`answer = 1 + 1` \
+The value of answer is now assigned to `2`. \ 
+To verify this you can output the value of answer by doing; \
+`print(answer)` \
 
-- **Bringing Variables and Data Types**
-##### Action Item 
-**creating a variable:**
-- Type `sample_variable=None` and click the play button.\
-If done successfully you screen should look like that below.
-You just declared your first empty variable. _sample_variable_ is the name of the variable. The = is how you assign a data type to your variable. _None_ Means there is no data to be stored in _sample_variable_ (it is an empty variable). \
-<img src="images/empty_var.png" />
-- Create more variables _sample_variable_ to other names, find out what name can work and which names create an error. For example variables beginning with - will create an error. Using comments (comments are notes you put in your code, they are mostly reminders you put). To create a new comment in Python start the line with a # symbol. Comment 5 types of variable names that do not work in a new cell. If done successfully, you should have the same output as the image below. To know if your variable name is valid or not, enter the variable name in a cell and click play. If it is not valid, you will have an output in red. \
-<img src="images/comments.png" />
+In the line of code above the `+` symbol is called an operator. Operators are symbols used by the programming language to perform processing. Another example of an operator is `=`.
 
-**declaring a data type in a variable:**
-- On a new cell, Type `sample_variable="Hello world"` and click the play button. \
-If done successfully you screen should look like that below.
-You have assigned a value to the _sample_variable_ which means the variable now consumes space on the RAM. The consumption amount is based on the size of the data type. (In this case ~88 bytes). 
-Data types that begin with " like in "Hello world" are known as **strings**.
-Data types that begin are whole numbers are known as **integers** e.g _sample_variable=1_
-Data types that have decimal places as known as **floats** e.g _sample_variable=1.002_
-<img src="images/declared_var.png" />
+**Non-exhaustive list of operators and their functions in Python3**
+- `+` = used for additions and joining 2 or more things
+- `-` = used for subtractions
+- `*` = used for multiplications
+- `/` = used for divisions
+For the actions items following, more operators will be required than those on this list. The participant is expected to do some research with tools such as Google to figure out what the operators they will need are. This is as a means of encouraging further research among the participants.
 
-- **Issues you may face with Colabs**
-> Making changes without clicking the play button does not update the project and would lead to an error like that below.
-<img src="images/error.png" />
-
-
-#### Task 3: Outputting the values of a variable
-The same way a data type can directly be printed to the output, for example outputting 'Hello world' when the play button is clicked on a `print("hello world")` you can also print out the contents of a variable by placing the variable in a print statement. Data visualization for a data science is vital for analysis, as such knowing the various way to output data to check for validity is very important.
 ##### Action Items
-- On a new cell, Type `print(sample_variable)` and click the play button. \
-If done successfully you screen should look like that below.
-<img src="images/output_variable.png" />
+_Colabs tip: You can create a new cell by holding down the **Shift** key and pressing the **Enter** key_
+- Create a variable called _var1_ and assign the value of **2+2**, then print out the variable.
+- Write a comment about the data type assigned to the _var1_.
+- On a new cell create a variable called _var2_ and assign the value of **3+2/5**, then print out the variable.
+- Write a comment about the data type assigned to the _var2_.
+- On a new cell create a variable called _var3_ and assign the value of **4** multiplied by **16**, then print out the variable.
+- Write a comment about the data type assigned to the _var3_.
+- On a new cell create a variable called _var4_ and assign the value of **4** raised to the power of **6**, then print out the variable.
+- Write a comment about the data type assigned to the _var4_
+- On a new cell create a variable called _var5_ and assign the value of `'Hello' + ' ' + 'world'`, then print out the variable.
+- Write a comment about the data type assigned to the _var5_
+- On a new cell create a variable called _var6_ and assign the value of `'Hello world` multiplied by 5, then print out the variable.
+- Write a comment about the data type assigned to the _var6_
+- On a new cell create a variable called _var7_ and assign the value of **4** mod (modulo) **3**, then print out the variable.
+- Write a comment about the data type assigned to the _var7_
 
-#### Task 4: Push your work to GitHub
-Based on the concept of Day 1, the participant should know how to push their work to GitHub. In case you are still not familiar with how this is done, please refer back the concept of Day 1.
 
-#### Conclusion
-If you have made it this far, congratulations!! \
-- You are able to define the relationship between a variable and the RAM \
-- Recognize the different data types when they are presented
-- See the output from your variable
+#### Task 2: Creating a better presentation with Colabs
+Source code can be difficult to read at times. Without a lot of practice it might take one so much time to get down to the actual functionalities a piece of code is highlighting. Data scientist do not write code as the daily software engineer will do; a data scientist is interested in getting results from data and that might sometimes be met with using new methods of using code. \
+In other to make sure this does not happen often Colabs integrated a section called text. This allows users to add a text description about their code. \
+You can find text on the top left side of the screen written as `+ Text` close to the alternative `+ Code`. \
+<img src="images/text_colabs.png" />
+When text is clicked, a new text cell is created and the user can type in plain text and perform other forms of formatting on the text.  \
+<img src="images/sample_text_colab.png" />
+Experiment with this feature then go ahead to do the action items.
+##### Action Items
+- For the cells containing _var1_, _var2_,  _var3_,  _var4_, _var5_, _var6_ and _var7_, create a new text under each of the cells. Insert a description of what is happening in each of the cells.
 
-**Fun fact:** Some programming languages support the concept of garbage collection. This is when variables are changed back to 'None' by the programming language to stop ended programs for continuing to consume RAM. Languages like C and C++ do not support this, so the programmer is responsible to clearing used variable spaces.
-
+**Conclusion**
+If you have made this far, Congratulations!!
+- You are able to perform simple calculations using Python
+- You are able to verify the values of your calculations using Python outputs
+- You are better aware of the relationship between your code and your CPU
 
 
 
