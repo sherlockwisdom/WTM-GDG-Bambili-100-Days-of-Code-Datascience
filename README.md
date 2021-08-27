@@ -49,6 +49,7 @@ When you declare variables they do not hold any data and as such do not consume 
 If done successfully you screen should look like that below.
 You just declared your first empty variable. _sample_variable_ is the name of the variable. The = is how you assign a data type to your variable. _None_ Means there is no data to be stored in _sample_variable_ (it is an empty variable). \
 <img src="images/empty_var.png" />
+
 - Create more variables _sample_variable_ to other names, find out what name can work and which names create an error. For example variables beginning with - will create an error. Using comments (comments are notes you put in your code, they are mostly reminders you put). To create a new comment in Python start the line with a # symbol. Comment 5 types of variable names that do not work in a new cell. If done successfully, you should have the same output as the image below. To know if your variable name is valid or not, enter the variable name in a cell and click play. If it is not valid, you will have an output in red. \
 <img src="images/comments.png" />
 
