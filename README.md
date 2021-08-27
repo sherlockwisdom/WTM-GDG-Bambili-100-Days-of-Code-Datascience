@@ -84,6 +84,9 @@ Experiment with this feature then go ahead to do the action items.
 ##### Action Items
 - For the cells containing _var1_, _var2_,  _var3_,  _var4_, _var5_, _var6_ and _var7_, create a new text under each of the cells. Insert a description of what is happening in each of the cells.
 
+#### Task 3: Push your work to GitHub
+Based on the concept of Day 1, the participant should know how to push their work to GitHub. In case you are still not familiar with how this is done, please refer back the concept of Day 1.
+
 **Conclusion**
 If you have made this far, Congratulations!!
 - You are able to perform simple calculations using Python
