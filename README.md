@@ -77,9 +77,9 @@ _Colabs tip: You can create a new cell by holding down the **Shift** key and pre
 Source code can be difficult to read at times. Without a lot of practice it might take one so much time to get down to the actual functionalities a piece of code is highlighting. Data scientist do not write code as the daily software engineer will do; a data scientist is interested in getting results from data and that might sometimes be met with using new methods of using code. \
 In other to make sure this does not happen often Colabs integrated a section called text. This allows users to add a text description about their code. \
 You can find text on the top left side of the screen written as `+ Text` close to the alternative `+ Code`. \
-<img src="images/text_colabs.png" />
+<img src="images/text_colabs.png" /> \
 When text is clicked, a new text cell is created and the user can type in plain text and perform other forms of formatting on the text.  \
-<img src="images/sample_text_colab.png" />
+<img src="images/sample_text_colab.png" /> \
 Experiment with this feature then go ahead to do the action items.
 ##### Action Items
 - For the cells containing _var1_, _var2_,  _var3_,  _var4_, _var5_, _var6_ and _var7_, create a new text under each of the cells. Insert a description of what is happening in each of the cells.
