@@ -1,5 +1,5 @@
 ﻿﻿
-# Day 3
+# Day 4
 ## Introduction to your Tools
 
 ### Definitions
@@ -12,7 +12,7 @@ __concept__ -  Piece of knowledge the being introduced for the day.\
  __push__ - Sending codes from your computer to your Github account\
 
 #### Today's concept
-Today we will introduce the participants to processing using Python and also a brief overview of how processing works at the CPU level. 
+Today we will introduce the participants to concepts of list and how it differs from Arrays  in Python3. 
 
 #### Disclaimer
 Before continuing the participants should meet the following requirements. In case you do not already have them, use the links attached to be guided.
@@ -21,77 +21,57 @@ Before continuing the participants should meet the following requirements. In ca
 3. Have an active internet connection while using Colabs
 
 #### Goal
-By the end of this concept, the participant should be aware of concepts such as the rule CPU plays in programming, identifying the types of CPUs and doing some basic CPU task with Python. The participant will also learn how to do some basic arithmetic using the Python3.
+By the end of this concept, the participant should be able combine multiple data types into a new data type called a list. This allows participants combine multiple data types from data sources into a single unit.
 
  1. Returning to a Colabs projects.
  2. Writing more lines of code on Colabs.
  3. Committing projects to GitHub directly from Google Colab. 
 
-#### Task 1: Understanding how processing works in Python
-Computers were created for the sole reasons of performing complex mathematical operations that would not have been feasibly done by a human person. \
-**_Great read:_** https://www.history.com/news/human-computers-women-at-nasa \
-This ability of computers is what allows data scientist to compute huge amounts of data in complex activities such as machine learning and other form of analysis. \
-In the last concept we saw that when it came to assigning data types to variables we rely heavily on the RAM. \
-Now when it comes to performing calculations and other forms of data manipulations we rely heavily on the CPU. \
-Every time a user does any form of computation on the computer, they rely on the CPU. For example, when you move the mouse a complex algorithm is used to map the location of the pointer on the screen while maintaining communications with the physical mouse. This is all done on the CPU which is why when the CPU is overworked (doing too many heavy things at once) events turn to happen way after the command has been sent. In some cases all the previous commands requested such as dragging an icon or deleting a file will be done almost all at once way after the original request was made. \
-When performing activities in Python such as mathematical operations or searching for files on the computer the CPU is being consumed. \
-CPU is measured in frequency (GHz) which relates to how fast the programs can be executed on the computer. Modern computers come with more than 1 CPU installed; computers with 2 CPUs are called Dual Core, computers with 4 CPUs are called Quad Core. Computers go all the way up to 32 CPUs mostly used by big industrial units. \
-When it comes to extremely large data sets we will begin relying on the GPU (Graphical Processing Unit). \
+#### Task 1: What's the differentiates a list from an Array
+In programming languages like C, C++ and Java, there exist a datatype called Arrays. An array is a collection of similar data types into a new data type. For example an Array of Strings will be **{"Hello", "world", "this", "is", "an", "array", "of", "strings"}**. Important rule is Arrays must contain only the same data types. This means mixing up data types into an Array would lead to an error being thrown. \
+\
 
-#### Follow along examples (you are expected to type this in your colabs and get the required outputs)
-1. We begin with a basic form of processing, that is the "Hello world" of mathematics (1+1) \
-To perform a simple 1+1 calculation in python; \
-`answer = 1 + 1` \
-The value of answer is now assigned to `2`. \ 
-To verify this you can output the value of answer by doing; \
-`print(answer)` \
+A list as introduced in Python  is like an Array but with the ability to hold multiple data types. For example a sample list in Python will look like **{"Hello", "world", 1, 2, 3, 7.0}**. The ability for a list to store multiple data types makes Python a unique language for data scientist. See a sample list created below: \
+<img src="images/sample_list.png" />
+\
+Must data set collect data of multiple types (qualitative and quantitative), which each row being a single respondent and might need to be treated as a single unit. In other programming languages, custom data types would have to be created to contain said row, but with Python all the data can be contained in a single list for each row. \
+\
+Knowing the difference between an Array and a list comes in handy when dealing with multiple programming languages which is common among data scientist. \
+\
+To declare a list in Python, create the var and assign the value beginning and ending with **[** and **]** respectively. For each Item contain in the square brackets separate them with commas (,). You can try the example below and if done successfully your output would look the same as the image below. \
+<img src="images/sample_list_output.png" /> \
 
-In the line of code above the `+` symbol is called an operator. Operators are symbols used by the programming language to perform processing. Another example of an operator is `=`.
+##### Action Item
+- Create a list called _list1_ containing 5 strings, 5 floats and 4 integers of your choosing.
+- On a new cell, create var called _var1_ and assign it the value of `"Hello" + " world"`. Add _var1_ to _list1_.
+- On a new cell, create a list called _list4_ containing 5 Integers, 6 floats and 4 Strings of your choosing.
 
-**Non-exhaustive list of operators and their functions in Python3**
-- `+` = used for additions and joining 2 or more things
-- `-` = used for subtractions
-- `*` = used for multiplications
-- `/` = used for divisions
-For the actions items following, more operators will be required than those on this list. The participant is expected to do some research with tools such as Google to figure out what the operators they will need are. This is as a means of encouraging further research among the participants.
+List in Python can be manipulated with the `+` operator as many of data types in Python. The most common use of `+` operator in Python is to merge 2 or more list into one. For example: \
+`list1 = ["Hello", 1, "world", 2]` \
+`list2 = [3, "Good", 4, "day"]` \
+`list3 = list1 + list2` \
+When we output the value of `list3` we will get the following output. \
+`["Hello", 1, "world", 2, 3, "Good", 4, "day"]` \
+<img src="images/list_output.png" /> \
+\
+##### Action Item
+- On a new cell create a new var called _list5_ and assign the value of _list1_ and _list4_.
 
-##### Action Items
-_Colabs tip: You can create a new cell by holding down the **Shift** key and pressing the **Enter** key_
-- Create a variable called _var1_ and assign the value of **2+2**, then print out the variable.
-- Write a comment about the data type assigned to the _var1_.
-- On a new cell create a variable called _var2_ and assign the value of **3+2/5**, then print out the variable.
-- Write a comment about the data type assigned to the _var2_.
-- On a new cell create a variable called _var3_ and assign the value of **4** multiplied by **16**, then print out the variable.
-- Write a comment about the data type assigned to the _var3_.
-- On a new cell create a variable called _var4_ and assign the value of **4** raised to the power of **6**, then print out the variable.
-- Write a comment about the data type assigned to the _var4_
-- On a new cell create a variable called _var5_ and assign the value of `'Hello' + ' ' + 'world'`, then print out the variable.
-- Write a comment about the data type assigned to the _var5_
-- On a new cell create a variable called _var6_ and assign the value of `'Hello world` multiplied by 5, then print out the variable.
-- Write a comment about the data type assigned to the _var6_
-- On a new cell create a variable called _var7_ and assign the value of **4** mod (modulo) **3**, then print out the variable.
-- Write a comment about the data type assigned to the _var7_
+##### Action Item (for those already used to the concepts of list and other Python methods)
+- Create a list called _list2_ with the following inputs: 5, 6, 7.0, "Eight", "Nine"
+- Create another list called _list3_ and it's values are the data types of each item in _list2_. The values should not be manually typed but should be generated based on the values of _list2_. This means if _list2_ is changed your method at _list3_ would still remain valid. That means the 0th item of _list3_ is the data type o the 0th item of _list2_. Your data type should be one of the following: \
+- - Integer
+- - String
+- - Float
 
-
-#### Task 2: Creating a better presentation with Colabs
-Source code can be difficult to read at times. Without a lot of practice it might take one so much time to get down to the actual functionalities a piece of code is highlighting. Data scientist do not write code as the daily software engineer will do; a data scientist is interested in getting results from data and that might sometimes be met with using new methods of using code. \
-In other to make sure this does not happen often Colabs integrated a section called text. This allows users to add a text description about their code. \
-You can find text on the top left side of the screen written as `+ Text` close to the alternative `+ Code`. \
-<img src="images/text_colabs.png" />
-When text is clicked, a new text cell is created and the user can type in plain text and perform other forms of formatting on the text.  \
-<img src="images/sample_text_colab.png" />
-Experiment with this feature then go ahead to do the action items.
-##### Action Items
-- For the cells containing _var1_, _var2_,  _var3_,  _var4_, _var5_, _var6_ and _var7_, create a new text under each of the cells. Insert a description of what is happening in each of the cells.
-
-#### Task 3: Push your work to GitHub
-Based on the concept of Day 1, the participant should know how to push their work to GitHub. In case you are still not familiar with how this is done, please refer back the concept of Day 1.
+#### Task 2: Push your code to GitHub
+Based on the previous concepts, you can go ahead and push your work to GitHub.
 
 **Conclusion**
 If you have made this far, Congratulations!!
-- You are able to perform simple calculations using Python
-- You are able to verify the values of your calculations using Python outputs
-- You are better aware of the relationship between your code and your CPU
+- You are able to group different data types in to a single variable
+- You know the difference between an Array and a List
+- **If you did the advanced task**, you can run data validation on your list which will become a very needed skill for  a data scientist.
 
 
 
